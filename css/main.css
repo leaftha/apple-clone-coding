@@ -80,9 +80,11 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
+  top: 35vh;
   margin: 5px;
   height: 3em;
   font-size: 2.5rem;
+  opacity: 0;
 }
 
 .main-message p {
@@ -116,14 +118,25 @@ a {
   color: rgb(29, 29, 31);
 }
 
-.desc-message {
-  width: 50%;
+.sticky-elem.desc-message {
+  width: 45%;
   font-weight: bold;
+  opacity: 0;
 }
 .pin {
   width: 1px;
   height: 100px;
   background: rgb(29, 29, 31);
+}
+
+#scroll-section-2 .b {
+  top: 10%;
+  left: 40%;
+}
+
+#scroll-section-2 .c {
+  top: 15%;
+  left: 45%;
 }
 
 .mid-message {
@@ -157,7 +170,6 @@ a {
 .sticky-elem {
   display: none;
   position: fixed;
-  top: 0;
   left: 0;
   width: 100%;
 }
@@ -193,8 +205,16 @@ a {
   .main-message small {
     font-size: 1.5vw;
   }
-  .desc-message {
+  .sticky-elem.desc-message {
     width: 20%;
+  }
+  #scroll-section-2 .b {
+    top: 20%;
+    left: 53%;
+  }
+
+  #scroll-section-2 .c {
+    left: 55%;
   }
 
   .mid-message {
