@@ -202,6 +202,7 @@ body.before-load {
   top: 0;
   z-index: 10;
 }
+
 .loading {
   display: flex;
   align-items: center;
@@ -216,12 +217,11 @@ body.before-load {
   opacity: 0;
   transition: 0.5s;
 }
-.before-load .container {
-  display: none;
-}
-.before-load .loading {
+
+.before-loading .loading {
   opacity: 1;
 }
+
 @keyframes loading-spin {
   100% {
     transform: rotate(360deg);
@@ -238,24 +238,22 @@ body.before-load {
     stroke-dashoffset: -157;
   }
 }
+
 .loading-circle {
   width: 54px;
   height: 54px;
   animation: loading-spin 3s infinite;
 }
+
 .loading-circle circle {
   stroke: black;
   stroke-width: 4;
-  /* getTotalLength()로 stroke의 길이를 얻어올 수 있음 */
-  stroke-dasharray: 157, 157;
+  stroke-dasharray: 157;
   stroke-dashoffset: 0;
-  fill: transparent;
+  fill: none;
+  transition: 0.5s;
   animation: loading-circle-ani 1s infinite;
-  /* transition: 1s; */
 }
-/* .loading-circle:hover circle {
-	stroke-dashoffset: -157;
-} */
 
 .normal-content {
   margin-bottom: 10rem;
