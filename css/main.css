@@ -18,7 +18,7 @@ a {
   text-decoration: none;
 }
 
-body.before-load {
+body.before-loading {
   overflow: hidden;
 }
 .container {
@@ -218,7 +218,12 @@ body.before-load {
   transition: 0.5s;
 }
 
+.before-loading .container {
+  display: none;
+}
+
 .before-loading .loading {
+  overflow: hidden;
   opacity: 1;
 }
 
